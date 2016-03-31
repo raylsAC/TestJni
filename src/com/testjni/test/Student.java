@@ -6,6 +6,16 @@ public class Student {
 	private int age;
 	private double height;
 	
+	public Student() {
+	}
+	
+	public Student(String nameString, int age, double height) {
+		this.name = nameString;
+		this.age = age;
+		this.height = height;
+	}
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -27,12 +37,26 @@ public class Student {
 	
 	public void setStudentInfo(String name, int age, double height){
 		this.name = name;
-		this.age =age;
+		this.age = age;
 		this.height = height;
 	}
 	
-	public native void setJniString(String str);
+	//jni字符串操作
+	public native int setJniString(String str);
 	public native String getJniString();
+	
+	//jni基本数据类型操作
+	public native int addNum(int a, int b);
+	
+	//jni输入一个数组
+	public native int sumArray(int[] a);
+	//jni返回一字符串数组
+	public native String[] getJniStringArray();
+	
+	//jni返回一个对象
+	public native static Student getJniStudentObj();
+	
+	
 	
 	static {
         System.loadLibrary("TestJni");

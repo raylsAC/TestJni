@@ -14,7 +14,12 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int jni_test_getstring=0x7f060000;
+        public static final int jni_test_addnum=0x7f060002;
+        public static final int jni_test_getstring=0x7f060001;
+        public static final int jni_test_setstring=0x7f060000;
+        public static final int jni_test_stringarray=0x7f060004;
+        public static final int jni_test_stringobj=0x7f060005;
+        public static final int jni_test_sumarray=0x7f060003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

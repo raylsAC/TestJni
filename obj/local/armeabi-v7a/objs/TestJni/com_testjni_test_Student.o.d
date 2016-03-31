@@ -1,4 +1,4 @@
-obj/local/armeabi/objs/TestJni/com_testjni_test_Student.o: \
+obj/local/armeabi-v7a/objs/TestJni/com_testjni_test_Student.o: \
  jni/com_testjni_test_Student.c jni/com_testjni_test_Student.h \
  D:/rayls/Eclipse/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/jni.h \
  D:/rayls/Eclipse/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs.h \
