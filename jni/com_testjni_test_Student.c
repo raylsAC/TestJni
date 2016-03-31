@@ -123,6 +123,44 @@ JNIEXPORT jobject JNICALL Java_com_testjni_test_Student_getJniStudentObj
 	return obj_ret;
 }
 
+//对图片像素进行灰化处理的算法
+JNIEXPORT jintArray JNICALL Java_com_testjni_test_Student_ChangeImgToGray
+  (JNIEnv *env, jobject this, jintArray pix, jint w, jint h){
+
+	//把java传来的数组缓存到c数组中,否则引用不了个中元素
+	jint *p_pix = (*env)->GetIntArrayElements(env, pix, NULL);
+	if(p_pix == NULL){
+		return NULL;
+	}
+
+	jint alpha = 0xFF<<24;
+	jint i, j;
+
+	for(i = 0; i < h; i++){
+		for(j = 0; j < w; j++){
+				jint color = p_pix[w*i+j];
+				jint red = ((color & 0x00FF0000) >> 16);
+				jint green = ((color & 0x0000FF00) >> 8);
+				jint blue = color & 0x000000FF;
+				color = (red + green + blue)/3;
+				color = alpha | (color << 16) | (color << 8) | color;
+				p_pix[w*i+j] = color;
+			}
+	}
+	jint size=w * h;
+//	jintArray result = (*env)->NewIntArray(env, size);
+//	(*env)->SetIntArrayRegion(env, result, 0, size, p_pix);
+//	(*env)->ReleaseIntArrayElements(env, pix, p_pix, 0);
+
+//	return result;
+
+	//以上也行
+	(*env)->SetIntArrayRegion(env, pix, 0, size, p_pix);
+	(*env)->ReleaseIntArrayElements(env, pix, p_pix, 0);
+
+	return pix;
+}
+
 
 
 

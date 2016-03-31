@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
@@ -13,7 +13,7 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
-    
+
     <TextView
         android:id="@+id/jni_test_getstring"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
-    
+
     <TextView
         android:id="@+id/jni_test_addnum"
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
-    
+
     <TextView
         android:id="@+id/jni_test_sumarray"
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
-    
+
     <TextView
         android:id="@+id/jni_test_stringarray"
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
-    
+
     <TextView
         android:id="@+id/jni_test_stringobj"
         android:layout_width="wrap_content"
@@ -53,5 +53,18 @@
         android:gravity="center"
         android:text="@string/hello_world"
         android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/jni_test_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/jni_test_click"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="click me"
+        android:textSize="20sp" />
 
 </LinearLayout>

@@ -52,6 +52,9 @@ JNIEXPORT jobjectArray JNICALL Java_com_testjni_test_Student_getJniStringArray
 JNIEXPORT jobject JNICALL Java_com_testjni_test_Student_getJniStudentObj
   (JNIEnv *, jobject);
 
+JNIEXPORT jintArray JNICALL Java_com_testjni_test_Student_ChangeImgToGray
+  (JNIEnv *, jobject, jintArray, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif

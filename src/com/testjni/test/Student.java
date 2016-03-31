@@ -56,6 +56,8 @@ public class Student {
 	//jni返回一个对象
 	public native static Student getJniStudentObj();
 	
+	//jni使图片灰化
+	public native int[] ChangeImgToGray(int[] pix, int w, int h);
 	
 	
 	static {
